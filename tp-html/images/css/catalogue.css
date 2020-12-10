@@ -1,0 +1,168 @@
+/*  MOBILE  */
+
+section {
+    height: 33%;
+    width: 99%;
+}
+
+article {
+    width: 98%;
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+    
+}
+
+article img:hover {
+    transform: scale(1.01);
+    font-size: 4em;
+}
+
+div.chancons {
+    visibility: hidden;
+    height: 0;
+}
+
+article:hover div.chancons {
+  
+    height: 80%;
+    visibility: visible;
+    transform: scale(1);
+    transition: 2s linear;
+}
+
+h3:hover {
+    transform: scale(1.01);
+    font-size: 1.2em;
+}
+
+img.image-album {
+    width: 40%;
+    height: 100%;
+    margin: 2% auto;
+    border-radius: 10%;
+    box-shadow: 4px 4px 4px black;
+}
+
+/*title d'album*/
+
+h3 {
+    width: 40%;
+    height: 3em;
+    text-shadow: 4px 4px 4px black;
+    margin: 0 auto
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    height: 5%;
+    width: 80%;
+    margin: 2%;
+    text-shadow: 4px 4px 4px black;
+}
+
+div.chancos {
+    width: 50%;
+    margin: 0 auto;
+}
+
+audio {
+    height: 40px;
+    width: 40%;
+    transition: 0.5s linear;
+}
+
+audio:hover {
+    width: 100%;
+}
+
+section a {
+    text-decoration: none;
+    color: white;
+}
+
+iframe {
+    width: 60%;
+    height: 100%;
+    margin: 2%;
+    box-shadow: 4px 4px 4px black;
+}
+
+iframe:hover {
+    /* transform: scale(1.01);*/
+    font-size: 48px;
+}
+
+/*  TABLETTE  */
+
+@media only screen and (min-width:639px) {
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        width: 95%;
+    }
+    article {
+        height: 100%;
+        width: 300px;
+        margin: 5px;
+        margin: 4px;
+    }
+    h2 {
+        height: 20px;
+        width: 90%;
+        margin: 5px;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    audio:hover {
+        width: 40%;
+    }
+   
+    h3:hover {
+      
+        font-size: 1em;
+    }
+
+    iframe{
+        width: 95%;
+        height: 100%;
+       
+
+    }
+    
+}
+
+/*  DESKTOP  */
+
+@media only screen and (min-width:959px) {
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        
+        justify-content: left;
+    }
+    article {
+        height: 80%;
+        width: 300px;
+       
+        margin:2px;
+    }
+    h2 {
+        height: 20px;
+        width: 100%;
+        margin: 6px;
+    }
+
+    
+  
+
+
+    
+}
