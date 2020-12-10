@@ -1,0 +1,162 @@
+/*  MOBILE  */
+
+section {
+    height: 33%;
+    width: 100%;
+    text-align: left;
+}
+
+article {
+    width: 95%;
+    text-align: center;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+article ul {
+    text-align: left;
+}
+
+img.image-album {
+    width: 50%;
+    height: 220px;
+    border-radius: 10px;
+}
+
+img.image-album:hover {
+    transform: scale(1.01);
+}
+
+h2 {
+    font-size: 1.8em;
+    text-shadow: 4px 4px 4px black;
+    margin: 2%;
+   
+    padding: 2%;
+    
+}
+
+h3 {
+    text-shadow: 4px 4px 4px black;
+}
+
+h4 {
+    font-size: 1.1em;
+    text-shadow: 4px 4px 4px black;
+}
+
+audio {
+    height: 40px;
+    width: 90%;
+    transition: 0.5s ;
+}
+
+li {
+    display: block;
+    height: 50px;
+    text-shadow: 4px 4px 4px black;
+    padding: 2%;
+    margin: 2%;
+    width: 80%;
+}
+
+iframe {
+    width: 50%;
+    box-shadow: 4px 4px 4px black;
+}
+
+article#presentation {
+    width: 90%;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+article img {
+    box-shadow: 4px 4px 4px black;
+}
+
+
+div#wrap section{
+    height: 62px;
+    overflow:hidden;
+    
+}
+
+#wrap section:hover{
+    height: 100%;
+}
+
+#wrap section:target{
+    height: 100%;
+}
+
+div#wrap h2{
+    border-radius: 10px;
+ 
+    background-color:rgb(134, 129, 129,1.5);
+    
+}
+
+video{
+
+    width: 25%;
+    height: 200px;
+}
+/*  TABLETTE  */
+
+@media only screen and (min-width:639px) {
+    div#wrap {
+        width: 100%;
+        margin: auto;
+    }
+    div#wrap section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+    div#wrap article:nth-of-type(1) {
+        width: 44%;
+        margin: 1%;
+        height: 300px;
+    }
+    div#wrap article:nth-of-type(2) {
+        width: 44%;
+        margin: 1%;
+        overflow: scroll;
+        height: 300px;
+        overflow: auto;
+    }
+    div#wrap article:nth-of-type(3) {
+        width: 93%;
+        padding: 1%;
+    }
+    div#wrap h2 {
+        height: 20px;
+        width: 90%;
+        margin: 2;
+        padding: 1%;
+    }
+    div.videos {
+        overflow: scroll;
+        display: flex;
+        overflow: auto;
+    }
+    div.videos iframe {
+        margin: 2%;
+    }
+
+
+}
+
+/*  DESKTOP  */
+
+@media only screen and (min-width:959px) {
+
+ 
+
+   
+
+}
+ 

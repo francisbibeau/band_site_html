@@ -1,0 +1,316 @@
+/*  COULEURS (THEME)  */
+
+html {
+    color: white;
+    background-color: black;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+header, nav, aside, article, footer {
+    background-color: rgb(50, 50, 50);
+}
+
+/*  BODY  */
+
+body {
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+    grid-gap: 8px;
+}
+
+/*  HEADER  */
+
+header {
+    grid-area: header;
+    position: relative;
+    font-size: 0px;
+}
+
+header>h1 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0px;
+    text-align: right;
+    font-family: 'built_titlingsemibold';
+    font-size: 50px;
+    color: black;
+    text-shadow: -1px -1px white, 1px -1px white, 1px 1px white, -1px 1px white, 5px 5px 1px white;
+}
+
+header>img#grandgroupe {
+    position: absolute;
+    width: 0px;
+}
+
+header>img#petitgroupe {
+    width: 100%;
+}
+
+/*  NAV  */
+
+nav {
+    grid-area: nav;
+}
+
+nav>form {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav>form>input {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+nav>form>input[type=text] {
+    width: 75%;
+}
+
+nav>a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    border-top: 1px solid rgb(20, 20, 20);
+}
+
+nav>a:not(:last-of-type) {}
+
+nav>a:visited {
+    color: rgb(180, 180, 180);
+}
+
+nav>a:hover {
+    color: white;
+    background-color: rgb(128, 128, 128);
+}
+
+nav>a:active {
+    color: black;
+    background-color: white;
+}
+
+nav>a.target {
+    text-decoration-line: line-through;
+}
+
+/*  MAIN  */
+
+main {
+    grid-area: main;
+}
+
+h2 {
+    /*font-family: 'built_titlingbold';*/
+    /*font-family: 'built_titlingregular';*/
+}
+
+/*  FOOTER  */
+
+footer {
+    grid-area: footer;
+    display: flex;
+    height: 150px;
+}
+
+footer>div {
+    display: block;
+    flex-basis: 1px;
+    flex-grow: 1;
+}
+
+footer>div#social {
+    display: flex;
+    flex-flow: column;
+}
+
+footer>div#social>figure {
+    margin: 0px;
+    flex-basis: 1px;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+footer>div#social>figure>* {
+    display: inline-block;
+}
+
+footer>div#social>figure>img.logo {
+    height: 16px;
+}
+
+footer>div#social>figure>figcaption>a {
+    color: white;
+    text-decoration: none;
+}
+
+footer>div:not([id]) {
+    text-align: center;
+}
+
+img#logo {
+    height: 100%;
+}
+
+footer>div#legal {
+    position: relative;
+}
+
+footer>div#legal>label#copyright {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/*  TABLETTE  */
+
+@media only screen and (min-width:639px) {
+    header>img#grandgroupe {
+        position: relative;
+        width: 100%;
+    }
+    header>img#petitgroupe {
+        position: absolute;
+        width: 0px;
+    }
+    header>h1 {
+        color: white;
+        text-shadow: -2px -2px black, 2px -2px black, 2px 2px black, -2px 2px black, 5px 5px 1px black;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav>form {
+        width: 100%;
+    }
+    nav>a {
+        text-align: center;
+        flex-basis: 1px;
+        flex-grow: 1;
+        border: none;
+        border-top: 1px solid rgb(20, 20, 20);
+    }
+}
+
+@media only screen and (min-width:639px) and (max-width:958px) {
+    nav>a:not(:last-of-type) {
+        border-right: 1px solid rgb(20, 20, 20);
+    }
+}
+
+/*  DESKTOP  */
+
+@media only screen and (min-width:959px) {
+    body {
+        grid-template-areas: "header header" "nav main" "footer footer";
+        max-width: 1200px;
+        /*box-shadow: 10px 0px 10px white;*/
+        margin: 8px auto;
+    }
+    nav {
+        display: block;
+    }
+    nav>form {
+        display: block;
+        width: unset;
+    }
+    nav>form>input {
+        display: block;
+    }
+    nav>form>input[type=text] {
+        width: 120px;
+        margin-bottom: 5px;
+    }
+    nav>a {
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid rgb(20, 20, 20);
+    }
+    nav>a:first-of-type {
+        border-top: 1px solid rgb(20, 20, 20);
+    }
+}
+
+/*  FONTS  */
+
+@font-face {
+    font-family: 'built_titlingbold_italic';
+    src: url('fonts/built titling bd it.ttf') format('ttf'), url('fonts/built_titling_bd_it-webfont.woff2') format('woff2'), url('fonts/built_titling_bd_it-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlingbold';
+    src: url('fonts/built titling bd.ttf') format('ttf'), url('fonts/built_titling_bd-webfont.woff2') format('woff2'), url('fonts/built_titling_bd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlingXLtIt';
+    src: url('fonts/built titling el it.ttf') format('ttf'), url('fonts/built_titling_el_it-webfont.woff2') format('woff2'), url('fonts/built_titling_el_it-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlingextralight';
+    src: url('fonts/built titling el.ttf') format('ttf'), url('fonts/built_titling_el-webfont.woff2') format('woff2'), url('fonts/built_titling_el-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlinglight_italic';
+    src: url('fonts/built titling lt it.ttf') format('ttf'), url('fonts/built_titling_lt_it-webfont.woff2') format('woff2'), url('fonts/built_titling_lt_it-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlinglight';
+    src: url('fonts/built titling lt.ttf') format('ttf'), url('fonts/built_titling_lt-webfont.woff2') format('woff2'), url('fonts/built_titling_lt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlingitalic';
+    src: url('fonts/built titling rg it.ttf') format('ttf'), url('fonts/built_titling_rg_it-webfont.woff2') format('woff2'), url('fonts/built_titling_rg_it-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlingregular';
+    src: url('fonts/built titling rg.ttf') format('ttf'), url('fonts/built_titling_rg-webfont.woff2') format('woff2'), url('fonts/built_titling_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlingsemibold_italic';
+    src: url('fonts/built titling sb it.ttf') format('ttf'), url('fonts/built_titling_sb_it-webfont.woff2') format('woff2'), url('fonts/built_titling_sb_it-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'built_titlingsemibold';
+    src: url('fonts/built titling sb.ttf') format('ttf'), url('fonts/built_titling_sb-webfont.woff2') format('woff2'), url('fonts/built_titling_sb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
